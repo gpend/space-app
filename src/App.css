@@ -5,6 +5,7 @@
 body{
   background-image: url("./assets/home/background-home-desktop.jpg");
   color: white;
+  background-size: cover;
 }
 
 nav{
