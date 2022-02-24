@@ -1,16 +1,45 @@
 :root{
   margin: 0;
+  --heading-1-fs: 9.375em;
+  --heading-1-4-ff: 'Bellefair', serif;
+  --heading-2-fs: 100px;
+  --heading-3-fs: 58px;
+  --heading-4-fs: 32px;
+  --heading-5-fs: 28px;
+  --heading-5-cs: 4.75px;
+  --heading-5-ff: 'Barlow Condensed', sans-serif;
+  --sub-heading-1-fs: 28px;
+  --sub-heading-1-ff: 'Bellefair', serif;
+  --sub-heading-2-fs: 14px;
+  --sub-heading-2-cs: 2.35px;
+  --sub-heading-2-ff: 'Barlow Condensed', sans-serif;
+  --nav-text-fs: 16px;
+  --nav-text-cs: 2.7px;
+  --nav-text-ff: 'Barlow Condensed', sans-serif;
 }
 
 body{
-  background-image: url("./assets/home/background-home-desktop.jpg");
   color: white;
-  background-size: cover;
+  background-color: black;
+  font-family: 'Barlow Condensed', sans-serif;
+  line-height: 1.6;
+  font-size: 16px;
 }
+
+.App{
+  /* height: 100vh; */
+}
+
+/*##################################### 
+Nav
+#####################################*/
 
 nav{
   display: flex;
   justify-content: right;
+  font-family: var(--nav-text-ff);
+  word-spacing: var(--nav-text-cs);
+  font-size: var(--nav-text-fs);
 }
 
 nav ul{
@@ -32,12 +61,79 @@ nav a{
   text-decoration: none;
 }
 
+.header--icon img{
+  width: 40px;
+}
+
+/*##################################### 
+Home
+#####################################*/
+
 .home{
+  /* height: 100vh; */
+  padding: 2em 2em;
+  background-image: url("./assets/home/background-home-mobile.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.home-body{
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 10px;
-  margin: 10em 5em;
 }
+
+.home--copy{
+  text-align: center;
+  font-size: 15px;
+  color: #D0D6F9;
+  ;
+}
+
+.home--line-one{
+  font-family: var(--heading-5-ff);
+  font-size: 16px;
+  letter-spacing: 2.7px;
+  line-height: 19.2px;
+  margin-bottom: 2rem;
+}
+
+
+.home--big-text{
+  font-size: 80px;
+  font-family: var(--heading-1-4-ff);
+  margin: 0;
+  line-height: 80px;
+  color: white;
+}
+
+.home--text{
+  line-height: 25px;
+  margin-bottom: 3em;
+}
+
+.home--button{
+  display: flex;
+  justify-content: center;
+}
+
+.home--button button{
+  height: 150px;
+  width: 150px;
+  border-radius: 100%;
+  font-family: "Bellefair", sans-serif;
+  font-size: 20px;
+  border: 1px solid white;
+}
+
+/*##################################### 
+Destination
+#####################################*/
+
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
