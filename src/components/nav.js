@@ -11,12 +11,12 @@ function Nav (){
                     </NavLink>
                 </li>
                 <li>
-                    <NavLink to={"/destination"}>
+                    <NavLink to={"/destination/Moon"}>
                         <span className="nav-number">01</span> DESTINATION
                     </NavLink>
                 </li>
                 <li>
-                    <NavLink to={"/crew"}>
+                    <NavLink to={"/crew/Hurley"}>
                         <span className="nav-number">02</span> CREW
                     </NavLink>
                 </li>

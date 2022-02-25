@@ -28,6 +28,7 @@ body{
 
 .App{
   /* height: 100vh; */
+  padding: 2em 2em;
 }
 
 /*##################################### 
@@ -65,13 +66,18 @@ nav a{
   width: 40px;
 }
 
+.subSection{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
 /*##################################### 
 Home
 #####################################*/
 
 .home{
   /* height: 100vh; */
-  padding: 2em 2em;
   background-image: url("./assets/home/background-home-mobile.jpg");
   background-size: cover;
   background-repeat: no-repeat;
