@@ -1,16 +1,10 @@
 import React from "react";
-import icon from "../assets/shared/icon.png"
-import Nav from "./nav"
+import Header from "./Header"
 
 function Home(){
     return(
-        <div className="home">
-            <header>
-                <div className='header--icon'>
-                    <img src={icon} alt="site icon" />
-                </div>
-                <Nav />
-            </header>
+        <div className="home subApp">
+            < Header />
             <div className="home--body">
                 <div className="home--copy">
                     <p className="home--line-one">SO, YOU WANT TO TRAVEL TO</p>

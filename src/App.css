@@ -26,30 +26,44 @@ body{
   font-size: 16px;
 }
 
-.App{
+.subApp{
   /* height: 100vh; */
-  padding: 2em 2em;
+  padding: 2em 3em;
 }
 
 /*##################################### 
-Nav
+Header
 #####################################*/
 
-nav{
+header{
+  margin: 1em;
+  display: flex;
+  align-items: center;
+}
+
+.header--icon img{
+  width: 40px;
+  
+}
+
+nav.headerNav{
   display: flex;
   justify-content: right;
   font-family: var(--nav-text-ff);
   word-spacing: var(--nav-text-cs);
   font-size: var(--nav-text-fs);
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(81.5485px);
 }
 
-nav ul{
+nav.headerNav ul{
   display: flex;
-  list-style: none;
+  flex-direction: column;
   margin-right: 1rem;
+  list-style: none;
 }
 
-nav li{
+nav.headerNav li{
   margin-left: 1rem;
 }
 
@@ -62,22 +76,29 @@ nav a{
   text-decoration: none;
 }
 
-.header--icon img{
-  width: 40px;
-}
+/*##################################### 
+sub section
+#####################################*/
 
-.subSection{
+.sub-section{
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
 }
+
+.sub-nav ul{
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+}
+
 /*##################################### 
 Home
 #####################################*/
 
 .home{
-  /* height: 100vh; */
+  height: 100vh;
   background-image: url("./assets/home/background-home-mobile.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -125,6 +146,7 @@ Home
 .home--button{
   display: flex;
   justify-content: center;
+  margin-bottom: 3em;
 }
 
 .home--button button{

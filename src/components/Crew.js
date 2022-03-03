@@ -1,7 +1,6 @@
 import { Route, Routes, useParams } from "react-router"
 import { Link } from "react-router-dom"
-import icon from "../assets/shared/icon.png"
-import Nav from "./nav"
+import Header from "./Header"
 import data from "../assets/shared/data.json"
 import React from "react"
 // import image from '../assets/crew/image-douglas-hurley.png'
@@ -16,8 +15,23 @@ function Crew(props){
         const crewMember = memberData[0]
         return(
             <div className="subSection crewMember" key={crewMember.name}>
-                <img src={crewMember.images.png} alt="crew member" />
-                <nav>
+                <img src={crewMember.images.webp} alt="crew member" />
+                
+                <p>{crewMember.role}</p>
+                <h1>{crewMember.name}</h1>
+                <p>{crewMember.bio}</p>
+            </div>
+        )
+    }
+
+    return(
+        <div className="crew sub-app">
+            <Header />
+            <div className="sub-section">
+                <p>
+                    <span className="crew--header-number">02</span> MEET YOUR CREW 
+                </p>
+                <div className="sub-nav">
                     <ul>
                         {data.crew.map(crew => (
                             <li key={crew.name}>
@@ -29,27 +43,7 @@ function Crew(props){
                             </li>
                         ))}
                     </ul>
-                </nav>
-                <p>{crewMember.role}</p>
-                <h1>{crewMember.name}</h1>
-                <p>{crewMember.bio}</p>
-            </div>
-        )
-    }
-
-    return(
-        <div className="crew">
-            <header>
-                <div className='header--icon'>
-                    <img src={icon} alt="site icon" />
                 </div>
-                <Nav />
-            </header>
-            <div className="subSection">
-                <p>
-                    <span className="crew--header-number">02</span> MEET YOUR CREW 
-                </p>
-                
                 <Routes>
                     <Route path=":crewMember" element={<FormatCrew />}/>
                 </Routes>
