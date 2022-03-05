@@ -12,6 +12,16 @@ function Destination(props){
         const planetaryBody = bodyData[0]
         return(
             <div className="planetaryBody subSection" key={planetaryBody.name}>
+                <img src={planetaryBody.images.webp} alt="" />
+                <div className="sub-nav">
+                    <ul>
+                        {data.destinations.map(destination => (
+                            <li key={destination.name}>
+                                <Link to={`/destination/${destination.name}`}>{destination.name}</Link>
+                            </li>
+                        ))}
+                    </ul>
+                </div>
                 <h1>{planetaryBody.name}</h1>
                 <p>{planetaryBody.description}</p>
                 <hr />
@@ -30,15 +40,7 @@ function Destination(props){
                 <p>
                     <span className="destination--header-number">01</span> PICK YOUR DESTINATION
                 </p>
-                <div className="sub-nav">
-                    <ul>
-                        {data.destinations.map(destination => (
-                            <li key={destination.name}>
-                                <Link to={`/destination/${destination.name}`}>{destination.name}</Link>
-                            </li>
-                        ))}
-                    </ul>
-                </div>
+                
                 <Routes>
                     <Route path=":bodyID" element={<FormatBody />}/>
                 </Routes>

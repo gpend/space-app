@@ -2,15 +2,11 @@ import { Route, Routes, useParams } from "react-router"
 import { Link } from "react-router-dom"
 import Header from "./Header"
 import data from "../assets/shared/data.json"
-import React from "react"
-// import image from '../assets/crew/image-douglas-hurley.png'
 
 function Crew(props){
     //  `${crewMember.images.png}` 
     function FormatCrew(){
-        const props = useParams()
-        // console.log(props)
-        
+        const props = useParams()        
         const memberData = data.crew.filter((crew) => (crew.name.split(' ')[1]) === props.crewMember)
         const crewMember = memberData[0]
         return(
