@@ -87,6 +87,11 @@ sub section
   text-align: center;
 }
 
+.sub-nav{
+  display: flex;
+  justify-content: center;
+}
+
 .sub-nav ul{
   list-style: none;
   display: flex;

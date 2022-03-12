@@ -14,9 +14,9 @@ function Technology(props){
             <img src={technology.images.portrait} alt="" />
             <div className="sub-nav">
                     <ul>
-                        {data.technology.map(technology => (
+                        {data.technology.map((technology, i) => (
                             <li key={(technology.name.split(' ')[0])}>
-                                <Link to={`/technology/${(technology.name.split(' ')[0])}`}>{technology.name}</Link>
+                                <Link to={`/technology/${(technology.name.split(' ')[0])}`}>{i+1}</Link>
                             </li>
                         ))}
                     </ul>
@@ -35,12 +35,12 @@ function Technology(props){
                 <p>
                     <span className="technology--header-number">03</span> SPACE LAUNCH 101
                 </p>
+            
+                <Routes>
+                    <Route path=":techID" element={<FormatBody />}/>
+                </Routes>
                 
             </div>
-            <Routes>
-                <Route path=":techID" element={<FormatBody />}/>
-            </Routes>
-            
         </div>
     )
 }
