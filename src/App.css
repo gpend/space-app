@@ -95,7 +95,7 @@ sub section
 .sub-nav ul{
   list-style: none;
   display: flex;
-  flex-direction: row;
+  padding: 0;
 }
 
 /*##################################### 
