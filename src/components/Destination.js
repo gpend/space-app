@@ -20,7 +20,7 @@ function Destination(props) {
             {data.destinations.map((destination) => (
               <li key={destination.name}>
                 <Link to={`/destination/${destination.name}`}>
-                  {destination.name}
+                  {destination.name.toUpperCase()}
                 </Link>
               </li>
             ))}

@@ -19,7 +19,7 @@ function Technology(props) {
     const technology = techData[0];
     return (
       <div className='technology subSection' key={technology.name}>
-        <img src={technology.images.portrait} alt='' />
+        <img src={`/space-app/${technology.images.portrait}`} alt='' />
         <div className='sub-nav'>
           <ul>
             {data.technology.map((technology, i) => (
