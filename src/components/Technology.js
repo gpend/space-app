@@ -17,18 +17,27 @@ function Technology(props) {
       (technology) => technology.name.split(' ')[0] === props.techID
     );
     const technology = techData[0];
+
     return (
       <div className='technology subSection' key={technology.name}>
         <img src={`/space-app/${technology.images.portrait}`} alt='' />
         <div className='sub-nav'>
           <ul>
-            {data.technology.map((technology, i) => (
-              <li key={technology.name.split(' ')[0]}>
-                <Link to={`/technology/${technology.name.split(' ')[0]}`}>
-                  {i + 1}
+            {data.technology.map((technology, i) => {
+              console.log(props.techID, technology);
+              return (
+                <Link
+                  to={`/technology/${technology.name.split(' ')[0]}`}
+                  key={technology.name.split(' ')[0]}
+                >
+                  {props.techID === technology.name.split(' ')[0] ? (
+                    <li className='selected'> {i + 1} </li>
+                  ) : (
+                    <li>{i + 1}</li>
+                  )}
                 </Link>
-              </li>
-            ))}
+              );
+            })}
           </ul>
         </div>
         <p>THE TERMINOLOGY</p>

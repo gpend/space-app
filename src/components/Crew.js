@@ -28,9 +28,8 @@ function FormatCrew() {
                   >
                     <circle
                       opacity={
-                        window.location.href.split('/')[
-                          window.location.href.split('/').length - 1
-                        ] === crew.name.split(' ')[1]
+                        window.location.href.split('/').at(-1) ===
+                        crew.name.split(' ')[1]
                           ? '1'
                           : '0.174363'
                       }

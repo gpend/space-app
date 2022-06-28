@@ -173,10 +173,27 @@ Destination
   }
 }
 
-.destinations.sub-app {
-  background-image: url();
-}
 .planetaryBody.subSection .sub-nav a {
   margin: 1em 0.5em;
   color: white;
+}
+
+.technology .sub-nav li {
+  border: 1px solid hsl(0deg 0% 100% / 27%);
+  padding: 1em 1.5em;
+  margin: 0 0.5em;
+  border-radius: 50%;
+}
+
+.technology .sub-nav li.selected {
+  border: 1px solid rgb(255, 255, 255);
+}
+
+.technology .sub-nav a {
+  /* border: 1px solid white;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%; */
+  color: white;
+  text-decoration: none;
 }

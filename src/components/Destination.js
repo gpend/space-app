@@ -12,6 +12,7 @@ function Destination(props) {
       (destination) => destination.name === props.bodyID
     );
     const planetaryBody = bodyData[0];
+    //TODO fix selector underline and opacity
     return (
       <div className='planetaryBody subSection' key={planetaryBody.name}>
         <img src={`/space-app/${planetaryBody.images.webp}`} alt='' />
@@ -19,7 +20,10 @@ function Destination(props) {
           <ul>
             {data.destinations.map((destination) => (
               <li key={destination.name}>
-                <Link to={`/destination/${destination.name}`}>
+                <Link
+                  to={`/destination/${destination.name}`}
+                  className='unselected'
+                >
                   {destination.name.toUpperCase()}
                 </Link>
               </li>
