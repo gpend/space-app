@@ -22,7 +22,9 @@ function Technology(props) {
 
     return (
       <div className='technology subSection' key={technology.name}>
-        <img src={`/space-app/${technology.images.portrait}`} alt='' />
+        <div className='image__container'>
+          <img src={`/space-app/${technology.images.portrait}`} alt='' />
+        </div>
         <div className='sub-nav'>
           <ul>
             {data.technology.map((technology, i) => {

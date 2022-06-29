@@ -46,8 +46,9 @@ function FormatCrew() {
         </ul>
       </div>
       <div className='subSection crewMember' key={crewMember.name}>
-        <img src={`/space-app/${crewMember.images.webp}`} alt='crew member' />
-
+        <div className='image__container'>
+          <img src={`/space-app/${crewMember.images.webp}`} alt='crew member' />
+        </div>
         <p>{crewMember.role}</p>
         <h1>{crewMember.name}</h1>
         <p>{crewMember.bio}</p>

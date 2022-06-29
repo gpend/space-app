@@ -16,7 +16,9 @@ function Destination(props) {
     //TODO fix selector underline and opacity
     return (
       <div className='planetaryBody subSection' key={planetaryBody.name}>
-        <img src={`/space-app/${planetaryBody.images.webp}`} alt='' />
+        <div className='image__container'>
+          <img src={`/space-app/${planetaryBody.images.webp}`} alt='' />
+        </div>
         <div className='sub-nav'>
           <ul>
             {data.destinations.map((destination) => (

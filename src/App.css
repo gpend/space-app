@@ -177,6 +177,10 @@ Home
 Destination
 #####################################*/
 
+.planetaryBody.subSection .image__container {
+  height: 250px;
+}
+
 .planetaryBody.subSection .sub-nav a {
   margin: 1em 0.5em;
   color: white;
@@ -209,4 +213,12 @@ Technology
   border-radius: 50%; */
   color: white;
   text-decoration: none;
+}
+
+.technology.subSection .image__container {
+  height: 260px;
+}
+
+.subSection.crewMember .image__container {
+  height: 350px;
 }
