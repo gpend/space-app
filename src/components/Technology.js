@@ -13,8 +13,10 @@ function Technology(props) {
    */
   function FormatBody() {
     const props = useParams();
+    const techID = props.techID;
+
     const techData = data.technology.filter(
-      (technology) => technology.name.split(' ')[0] === props.techID
+      (technology) => technology.name.split(' ')[0] === techID
     );
     const technology = techData[0];
 
@@ -24,13 +26,12 @@ function Technology(props) {
         <div className='sub-nav'>
           <ul>
             {data.technology.map((technology, i) => {
-              console.log(props.techID, technology);
               return (
                 <Link
                   to={`/technology/${technology.name.split(' ')[0]}`}
                   key={technology.name.split(' ')[0]}
                 >
-                  {props.techID === technology.name.split(' ')[0] ? (
+                  {techID === technology.name.split(' ')[0] ? (
                     <li className='selected'> {i + 1} </li>
                   ) : (
                     <li>{i + 1}</li>

@@ -26,6 +26,11 @@ body {
   font-size: 16px;
 }
 
+.App {
+  width: 450px;
+  margin: 0 auto;
+}
+
 .subApp {
   /* height: 100vh; */
   padding: 2em 3em;
@@ -38,6 +43,7 @@ Header
 header {
   margin: 1em;
   display: flex;
+  justify-content: center;
   align-items: center;
 }
 
@@ -84,6 +90,10 @@ sub section
   flex-direction: column;
   align-items: center;
   text-align: center;
+}
+
+.sub-section img {
+  width: 250px;
 }
 
 .sub-nav {
@@ -167,16 +177,19 @@ Home
 Destination
 #####################################*/
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .planetaryBody.subSection .sub-nav a {
   margin: 1em 0.5em;
   color: white;
 }
+
+.destinations .sub-nav a.unselected {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.362);
+}
+
+/*##################################### 
+Technology
+#####################################*/
 
 .technology .sub-nav li {
   border: 1px solid hsl(0deg 0% 100% / 27%);

@@ -1,17 +1,18 @@
-import { Route, Routes, useParams, useLocation } from 'react-router';
+import { Route, Routes, useParams } from 'react-router';
 import { Link } from 'react-router-dom';
 import Header from './Header';
 import data from '../assets/shared/data.json';
 
 function Destination(props) {
-  const location = useLocation();
-  console.log(location.pathname.split('/')); //[2] ? "true": "false"
+  //   const location = useLocation();
+  //   console.log(location.pathname.split('/')); //[2] ? "true": "false"
   function FormatBody() {
     const props = useParams();
     const bodyData = data.destinations.filter(
       (destination) => destination.name === props.bodyID
     );
     const planetaryBody = bodyData[0];
+    console.log(planetaryBody.name, props.bodyID);
     //TODO fix selector underline and opacity
     return (
       <div className='planetaryBody subSection' key={planetaryBody.name}>
@@ -22,7 +23,11 @@ function Destination(props) {
               <li key={destination.name}>
                 <Link
                   to={`/destination/${destination.name}`}
-                  className='unselected'
+                  className={
+                    destination.name === props.bodyID
+                      ? 'selected'
+                      : 'unselected'
+                  }
                 >
                   {destination.name.toUpperCase()}
                 </Link>
