@@ -4,18 +4,14 @@ import Header from './Header';
 import data from '../assets/shared/data.json';
 
 function Destination(props) {
-  //   const location = useLocation();
-  //   console.log(location.pathname.split('/')); //[2] ? "true": "false"
   function FormatBody() {
     const props = useParams();
     const bodyData = data.destinations.filter(
       (destination) => destination.name === props.bodyID
     );
     const planetaryBody = bodyData[0];
-    console.log(planetaryBody.name, props.bodyID);
-    //TODO fix selector underline and opacity
     return (
-      <div className='planetaryBody subSection' key={planetaryBody.name}>
+      <div className='destination--subSection' key={planetaryBody.name}>
         <div className='image__container'>
           <img src={`/space-app/${planetaryBody.images.webp}`} alt='' />
         </div>
@@ -37,13 +33,25 @@ function Destination(props) {
             ))}
           </ul>
         </div>
-        <h1>{planetaryBody.name}</h1>
-        <p>{planetaryBody.description}</p>
-        <hr />
-        <p>AVG. DISTANCE</p>
-        <p>{planetaryBody.distance}</p>
-        <p>EST. TRAVEL TIME</p>
-        <p>{planetaryBody.travel}</p>
+        <div className='destination bodyText'>
+          <h1>{planetaryBody.name}</h1>
+          <p>{planetaryBody.description}</p>
+          <hr />
+          <div className='destination details'>
+            <div className='destination details distance'>
+              <p>AVG. DISTANCE</p>
+              <p className='destination details bigText'>
+                {planetaryBody.distance}
+              </p>
+            </div>
+            <div className='destination details travelTime'>
+              <p>EST. TRAVEL TIME</p>
+              <p className='destination details bigText'>
+                {planetaryBody.travel}
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     );
   }
