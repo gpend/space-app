@@ -177,16 +177,16 @@ Home
 Destination
 #####################################*/
 
-.destination--subSection .image__container {
+.destination--subSection.image__container {
   height: 250px;
 }
 
-.destination--subSection .sub-nav a {
+.destination--subSection.sub-nav a {
   margin: 1em 0.5em;
   color: white;
 }
 
-.destination--subSection .sub-nav a.unselected {
+.destination--subSection.sub-nav a.unselected {
   text-decoration: none;
   color: rgba(255, 255, 255, 0.362);
 }
