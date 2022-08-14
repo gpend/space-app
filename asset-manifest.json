@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/space-app/static/css/main.605185e1.css",
-    "main.js": "/space-app/static/js/main.8354b97a.js",
+    "main.css": "/space-app/static/css/main.71a08360.css",
+    "main.js": "/space-app/static/js/main.51738e94.js",
     "static/js/787.6c62ce17.chunk.js": "/space-app/static/js/787.6c62ce17.chunk.js",
     "static/media/background-home-mobile.jpg": "/space-app/static/media/background-home-mobile.13f7adecbcb3c3f170d8.jpg",
     "index.html": "/space-app/index.html",
-    "main.605185e1.css.map": "/space-app/static/css/main.605185e1.css.map",
-    "main.8354b97a.js.map": "/space-app/static/js/main.8354b97a.js.map",
+    "main.71a08360.css.map": "/space-app/static/css/main.71a08360.css.map",
+    "main.51738e94.js.map": "/space-app/static/js/main.51738e94.js.map",
     "787.6c62ce17.chunk.js.map": "/space-app/static/js/787.6c62ce17.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.605185e1.css",
-    "static/js/main.8354b97a.js"
+    "static/css/main.71a08360.css",
+    "static/js/main.51738e94.js"
   ]
 }
