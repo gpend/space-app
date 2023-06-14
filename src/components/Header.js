@@ -1,6 +1,7 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
-import icon from '../assets/shared/icon.png';
+import React from "react";
+import { NavLink } from "react-router-dom";
+import icon from "../assets/shared/icon.png";
+import hamburgerMenu from "../assets/shared/icon-hamburger.svg";
 
 function Header() {
   return (
@@ -9,43 +10,61 @@ function Header() {
         <img src={icon} alt='site icon' />
       </div>
       <nav className='headerNav'>
+        <button onClick={HideNav}>X</button>
         <ul>
           <li>
-            <NavLink to={'/space-app/'}>
+            <NavLink to={"/space-app/"}>
               <span className='nav-number' aria-hidden='true'>
                 00
-              </span>{' '}
+              </span>{" "}
               HOME
             </NavLink>
           </li>
           <li>
-            <NavLink to={'/destination/Moon'}>
+            <NavLink to={"/destination/Moon"}>
               <span className='nav-number' aria-hidden='true'>
                 01
-              </span>{' '}
+              </span>{" "}
               DESTINATION
             </NavLink>
           </li>
           <li>
-            <NavLink to={'/crew/Hurley'}>
+            <NavLink to={"/crew/Hurley"}>
               <span className='nav-number' aria-hidden='true'>
                 02
-              </span>{' '}
+              </span>{" "}
               CREW
             </NavLink>
           </li>
           <li>
-            <NavLink to={'/technology/Launch'}>
+            <NavLink to={"/technology/Launch"}>
               <span className='nav-number' aria-hidden='true'>
                 03
-              </span>{' '}
+              </span>{" "}
               TECHNOLOGY
             </NavLink>
           </li>
         </ul>
       </nav>
+      <div className='hamburgerMenu'>
+        <button id='menuButton' onClick={HideNav}>
+          <img src={hamburgerMenu} alt='menu' />
+        </button>
+      </div>
     </header>
   );
+}
+
+function HideNav() {
+  var navMenu = document.getElementsByClassName("headerNav")[0];
+  var hamburgerButton = document.getElementsByClassName("hamburgerMenu")[0];
+  if (navMenu.style.display === "block") {
+    navMenu.style.display = "none";
+    hamburgerButton.style.display = "block";
+  } else {
+    navMenu.style.display = "block";
+    hamburgerButton.style.display = "none";
+  }
 }
 
 export default Header;

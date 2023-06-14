@@ -1,7 +1,7 @@
-import { Route, Routes, useParams } from 'react-router';
-import { Link } from 'react-router-dom';
-import Header from './Header';
-import data from '../assets/shared/data.json';
+import { Route, Routes, useParams } from "react-router";
+import { Link } from "react-router-dom";
+import Header from "./Header";
+import data from "../assets/shared/data.json";
 
 function FormatBody() {
   const props = useParams();
@@ -21,7 +21,7 @@ function FormatBody() {
               <Link
                 to={`/destination/${destination.name}`}
                 className={
-                  destination.name === props.bodyID ? 'selected' : 'unselected'
+                  destination.name === props.bodyID ? "selected" : "unselected"
                 }
               >
                 {destination.name.toUpperCase()}
