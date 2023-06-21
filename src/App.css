@@ -16,6 +16,15 @@
   --nav-text-fs: 16px;
   --nav-text-cs: 2.7px;
   --nav-text-ff: "Barlow Condensed", sans-serif;
+  --copy-text-ff: "Barlow", sans-serif;
+}
+
+/* #############################
+# utility classes
+############################# */
+
+flex {
+  display: flex;
 }
 
 body {
@@ -27,14 +36,14 @@ body {
 }
 
 .App {
-  width: 450px;
+  width: 375px;
   margin: 0 auto;
   background-color: black;
 }
 
 .sub-app {
   /* height: 100vh; */
-  padding: 2em 3em;
+  padding: 0.5em 1em;
 }
 
 /*##################################### 
@@ -43,7 +52,6 @@ Header
 
 header {
   margin: 1em;
-  padding-top: 1em;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -62,40 +70,48 @@ header button {
 }
 
 nav.headerNav {
+  position: relative;
+}
+
+nav.headerNavMenu {
   display: none;
+  padding-top: 2rem;
+  padding-right: 2rem;
+  flex-direction: column;
+  align-items: end;
   position: absolute;
-  right: 0;
+  right: -3em;
+  top: -2.5em;
+  height: 100vh;
+  width: 70%;
   justify-content: right;
   font-family: var(--nav-text-ff);
   word-spacing: var(--nav-text-cs);
   font-size: var(--nav-text-fs);
   /* From https://css.glass */
-  background: rgba(92, 95, 91, 0.162);
-  border-radius: 16px;
+  background: rgba(158, 159, 157, 0.301);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(3.3px);
-  -webkit-backdrop-filter: blur(3.3px);
-  border: 1px solid rgba(112, 114, 111, 0.79);
+  transition: all 0.5s ease-in-out;
 }
 
-nav.headerNav ul {
-  position: relative;
-  display: flex;
+nav.headerNavMenu ul {
   flex-direction: column;
   margin-right: 1rem;
   list-style: none;
   padding-left: 1rem;
 }
 
-nav.headerNav button {
+nav.headerNavMenu button {
   margin: 0;
   position: absolute;
   right: 1rem;
   top: 0.5rem;
   color: white;
+  transition: all 0.5s ease-in-out;
 }
 
-nav.headerNav li {
+nav.headerNavMenu li {
   margin-left: 1rem;
 }
 
@@ -162,6 +178,7 @@ Home
 .home--copy {
   text-align: center;
   font-size: 15px;
+  line-height: 25px;
   color: #d0d6f9;
 }
 
@@ -176,7 +193,7 @@ Home
 .home--big-text {
   font-size: 80px;
   font-family: var(--heading-1-4-ff);
-  margin: 0;
+  margin: 0.5em 0;
   line-height: 80px;
   color: white;
 }
@@ -184,6 +201,7 @@ Home
 .home--text {
   line-height: 25px;
   margin-bottom: 3em;
+  font-family: var(--copy-text-ff);
 }
 
 .home--button {
