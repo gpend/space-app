@@ -1,16 +1,17 @@
 {
   "files": {
-    "main.css": "/space-app/static/css/main.71a08360.css",
-    "main.js": "/space-app/static/js/main.51738e94.js",
+    "main.css": "/space-app/static/css/main.5cee51aa.css",
+    "main.js": "/space-app/static/js/main.86d5f0c6.js",
     "static/js/787.6c62ce17.chunk.js": "/space-app/static/js/787.6c62ce17.chunk.js",
     "static/media/background-home-mobile.jpg": "/space-app/static/media/background-home-mobile.13f7adecbcb3c3f170d8.jpg",
     "index.html": "/space-app/index.html",
-    "main.71a08360.css.map": "/space-app/static/css/main.71a08360.css.map",
-    "main.51738e94.js.map": "/space-app/static/js/main.51738e94.js.map",
+    "static/media/icon-hamburger.svg": "/space-app/static/media/icon-hamburger.5273efa7c50e96ef3e51e7a2b54048ce.svg",
+    "main.5cee51aa.css.map": "/space-app/static/css/main.5cee51aa.css.map",
+    "main.86d5f0c6.js.map": "/space-app/static/js/main.86d5f0c6.js.map",
     "787.6c62ce17.chunk.js.map": "/space-app/static/js/787.6c62ce17.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.71a08360.css",
-    "static/js/main.51738e94.js"
+    "static/css/main.5cee51aa.css",
+    "static/js/main.86d5f0c6.js"
   ]
 }
