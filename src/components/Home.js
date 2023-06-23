@@ -1,5 +1,6 @@
 import React from "react";
 import Header from "./Header";
+import data from "../assets/shared/data.json";
 
 function Home() {
   return (
@@ -17,7 +18,9 @@ function Home() {
           </p>
         </div>
         <div className='home--button'>
-          <button className='home--button-explore'>EXPLORE</button>
+          <button className='home--button-explore' onClick={GoRandom}>
+            EXPLORE
+          </button>
         </div>
       </div>
     </div>
@@ -25,3 +28,39 @@ function Home() {
 }
 
 export default Home;
+
+function GoRandom() {
+  var category = Math.floor(Math.random() * 3 + 1);
+  var item = 0;
+  if (category !== 3) {
+    item = Math.floor(Math.random() * 4);
+  } else {
+    item = Math.floor(Math.random() * 3);
+  }
+
+  switch (category) {
+    case 1:
+      category = "destinations";
+      break;
+
+    case 2:
+      category = "crew";
+      break;
+
+    case 3:
+      category = "technology";
+      break;
+
+    default:
+      break;
+  }
+  var name = data[category][item].name;
+  if (category === "crew") {
+    name = name.split(" ")[1];
+  }
+  if (category === "destinations") {
+    category = "destination";
+  }
+
+  window.location.href = `/${category}/${name}`;
+}

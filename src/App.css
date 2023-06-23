@@ -29,7 +29,7 @@ flex {
 
 body {
   color: rgb(255, 255, 255);
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(63, 63, 63);
   font-family: var(--heading-5-ff);
   line-height: 1.6;
   font-size: 16px;
@@ -51,7 +51,7 @@ Header
 #####################################*/
 
 header {
-  margin: 1em;
+  margin: 0.5em 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -74,32 +74,34 @@ nav.headerNav {
 }
 
 nav.headerNavMenu {
-  display: none;
+  visibility: hidden;
+  display: flex;
   padding-top: 2rem;
   padding-right: 2rem;
   flex-direction: column;
-  align-items: end;
   position: absolute;
-  right: -3em;
-  top: -2.5em;
+  right: -1rem;
+  top: -1em;
   height: 100vh;
-  width: 70%;
+  width: 65%;
   justify-content: right;
   font-family: var(--nav-text-ff);
   word-spacing: var(--nav-text-cs);
   font-size: var(--nav-text-fs);
   /* From https://css.glass */
-  background: rgba(158, 159, 157, 0.301);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(3.3px);
+  background: rgba(158, 159, 157, 0.4);
+  backdrop-filter: blur(40px);
   transition: all 0.5s ease-in-out;
 }
 
 nav.headerNavMenu ul {
+  display: flex;
   flex-direction: column;
   margin-right: 1rem;
   list-style: none;
   padding-left: 1rem;
+  padding-top: 2rem;
+  justify-content: left;
 }
 
 nav.headerNavMenu button {
@@ -113,6 +115,7 @@ nav.headerNavMenu button {
 
 nav.headerNavMenu li {
   margin-left: 1rem;
+  margin-bottom: 2rem;
 }
 
 .nav-number {
@@ -159,7 +162,6 @@ Home
 #####################################*/
 
 .home {
-  /* height: 100vh; */
   background-image: url("./assets/home/background-home-mobile.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -224,7 +226,11 @@ Destination
 #####################################*/
 
 .destination--subSection.image__container {
-  height: 250px;
+  height: 170px;
+}
+
+.destination--subSection.image__container img {
+  width: 170px;
 }
 
 .destination--subSection.sub-nav a {
@@ -256,6 +262,8 @@ Technology
 
 .technology .sub-nav li.selected {
   border: 1px solid rgb(255, 255, 255);
+  background-color: white;
+  color: black;
 }
 
 .technology .sub-nav a {

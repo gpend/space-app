@@ -7,7 +7,9 @@ function Header() {
   return (
     <header>
       <div className='header--icon'>
-        <img src={icon} alt='site icon' />
+        <a href='/space-app/'>
+          <img src={icon} alt='site icon' />
+        </a>
       </div>
       <div className='headerNav'>
         <nav className='headerNavMenu'>
@@ -60,12 +62,12 @@ function Header() {
 function HideNav() {
   var navMenu = document.getElementsByClassName("headerNavMenu")[0];
   var hamburgerButton = document.getElementsByClassName("hamburgerMenu")[0];
-  if (navMenu.style.display === "block") {
-    navMenu.style.display = "none";
-    hamburgerButton.style.display = "block";
+  if (navMenu.style.visibility === "visible") {
+    navMenu.style.visibility = "hidden";
+    hamburgerButton.style.visibility = "visible";
   } else {
-    navMenu.style.display = "block";
-    hamburgerButton.style.display = "none";
+    navMenu.style.visibility = "visible";
+    hamburgerButton.style.visibility = "hidden";
   }
 }
 
