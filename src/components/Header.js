@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import icon from "../assets/shared/icon.png";
 import hamburgerMenu from "../assets/shared/icon-hamburger.svg";
 
@@ -7,9 +7,9 @@ function Header() {
   return (
     <header>
       <div className='header--icon'>
-        <a href='/space-app/'>
+        <Link to='/space-app/'>
           <img src={icon} alt='site icon' />
-        </a>
+        </Link>
       </div>
       <div className='headerNav'>
         <nav className='headerNavMenu'>

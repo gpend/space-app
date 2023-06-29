@@ -39,6 +39,7 @@ body {
   width: 375px;
   margin: 0 auto;
   background-color: black;
+  height: 100vh;
 }
 
 .sub-app {
@@ -225,6 +226,12 @@ Home
 Destination
 #####################################*/
 
+.destinations {
+  background-image: url("/public/assets/destination/background-destination-mobile.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 .destination--subSection.image__container {
   height: 170px;
 }
@@ -283,8 +290,43 @@ Technology
   height: 260px;
 }
 
+/*
+#####################################
+# 
+# Crew
+#
+#####################################
+*/
+
+.subSection.crewMember img {
+  width: 160px;
+}
 .subSection.crewMember .image__container {
-  height: 350px;
+  height: 230px;
+  border-bottom: rgba(56, 59, 75, 1) 2px solid;
+}
+.crewMember_role {
+  font-family: var(--sub-heading-1-ff);
+  font-size: var(--sub-heading-2-fs);
+  text-transform: uppercase;
+  opacity: 0.4951259195804596;
+  margin-bottom: 0;
+}
+
+.crewMember_name {
+  margin: 0;
+  font-family: var(--sub-heading-1-ff);
+  font-size: var(--sub-heading-1-fs);
+  text-transform: uppercase;
+}
+.crewMember_bio {
+  font-family: var(--sub-heading-1-ff);
+  line-height: 25px;
+  color: #d0d6f9;
+}
+.crew {
+  background-image: url("/public/assets/crew/background-crew-mobile.jpg");
+  background-size: cover;
 }
 
 @media (min-width: 700px) {
