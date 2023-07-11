@@ -40,7 +40,7 @@ function Header() {
               </NavLink>
             </li>
             <li>
-              <NavLink to={"/technology/Launch"}>
+              <NavLink to={"/technology/Launch_vehicle"}>
                 <span className='nav-number' aria-hidden='true'>
                   03
                 </span>{" "}

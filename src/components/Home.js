@@ -61,6 +61,9 @@ function GoRandom() {
   if (category === "destinations") {
     category = "destination";
   }
+  if (category === "technology") {
+    name = name.replace(" ", "_")
+  }
 
   window.location.href = `/${category}/${name}`;
 }

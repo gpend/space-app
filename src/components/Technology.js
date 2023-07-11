@@ -16,7 +16,7 @@ function Technology(props) {
     const techID = props.techID;
 
     const techData = data.technology.filter(
-      (technology) => technology.name.split(" ")[0] === techID
+      (technology) => technology.name.replace(' ','_') === techID
     );
     const technology = techData[0];
 
@@ -30,10 +30,10 @@ function Technology(props) {
             {data.technology.map((technology, i) => {
               return (
                 <Link
-                  to={`/technology/${technology.name.split(" ")[0]}`}
-                  key={technology.name.split(" ")[0]}
+                  to={`/technology/${technology.name.replace(' ', '_')}`}
+                  key={technology.name.replace(' ', '_')}
                 >
-                  {techID === technology.name.split(" ")[0] ? (
+                  {techID === technology.name.replace(' ', '_') ? (
                     <li className='selected'> {i + 1} </li>
                   ) : (
                     <li>{i + 1}</li>
